@@ -2,6 +2,8 @@
 layout: default
 title: amigurumi
 permalink: /amigurumi/
+lang: pt-BR
+alternate_url: /en/amigurumi/
 ---
 
 <section class="page-shell">

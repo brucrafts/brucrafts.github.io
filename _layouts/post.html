@@ -1,16 +1,20 @@
 ---
 layout: default
 ---
+{% assign post_home_path = '/' %}
+{% if page.lang == 'en' %}
+  {% assign post_home_path = '/en/' %}
+{% endif %}
 <article class="single-post">
-  <a class="back-link" href="{{ '/' | relative_url }}">← voltar para o feed</a>
+  <a class="back-link" href="{{ post_home_path | relative_url }}">{% if page.lang == 'en' %}← back to the feed{% else %}← voltar para o feed{% endif %}</a>
   <div class="single-post-heading">
     <p class="post-label">✿ {{ page.label | default: "post" }} · {{ page.category }}</p>
     <h1>{{ page.title }}</h1>
     {% if page.description %}<p>{{ page.description }}</p>{% endif %}
   </div>
   {% if page.image %}
-    <img class="single-post-image" src="{{ page.image | relative_url }}" alt="{{ page.image_alt | default: page.title }}">
+    <img class="single-post-image" src="{{ page.image | relative_url }}" alt="{{ page.image_alt | default: page.title | escape }}">
   {% endif %}
   <div class="post-body">{{ content }}</div>
-  <a class="text-button" href="https://www.instagram.com/itsbrusilvestre/" target="_blank" rel="noopener noreferrer">mais projetos no instagram ↗</a>
+  <a class="text-button" href="https://www.instagram.com/itsbrusilvestre/" target="_blank" rel="noopener noreferrer">{% if page.lang == 'en' %}more projects on Instagram{% else %}mais projetos no instagram{% endif %} ↗</a>
 </article>

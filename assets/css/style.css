@@ -67,6 +67,11 @@ button { font: inherit; }
 .window-dots i:nth-child(2) { background: #ffd879; }
 .window-dots i:nth-child(3) { background: #a8e18e; }
 .browser-code { font-family: var(--pixel-small); font-size: 24px; }
+.language-switch { display: flex; align-items: center; gap: 4px; font-family: var(--pixel-small); font-size: 20px; line-height: 1; }
+.language-switch a { display: inline-flex; align-items: center; gap: 4px; padding: 6px 8px; border: 1px solid transparent; border-radius: 8px; color: var(--ink); white-space: nowrap; transition: background .15s, border-color .15s; }
+.language-switch a:hover { border-color: var(--soft-line); background: #fff; }
+.language-switch a[aria-current="page"] { border-color: var(--soft-line); background: #fff9fc; box-shadow: 2px 2px 0 rgba(40,16,61,.08); }
+.language-switch a span { font-size: 19px; }
 .site-header {
   min-height: 64px;
   background: var(--purple);
@@ -239,6 +244,9 @@ button { font: inherit; }
   .pattern-downloads { width: 100%; }
 }
 @media (max-width: 480px) {
+  .browser-top { padding: 0 10px; }
+  .language-switch { gap: 2px; font-size: 18px; }
+  .language-switch a { gap: 3px; padding: 5px 6px; }
   .brand { font-size: 12px; }
   .main-nav { justify-content: flex-start; column-gap: 2px; }
   .main-nav > a, .nav-dropdown-button { font-size: 21px; }

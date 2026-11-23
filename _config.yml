@@ -1,4 +1,5 @@
 title: brucrafts
+lang: pt-BR
 description: alguns games e muitos hobbies de jovem senhora
 url: ""
 baseurl: ""
@@ -10,3 +11,4 @@ defaults:
       type: posts
     values:
       layout: post
+      lang: pt-BR

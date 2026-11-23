@@ -2,6 +2,8 @@
 layout: post
 title: "Link - Ocarina of Time"
 date: 2026-11-23
+lang: pt-BR
+alternate_url: /en/embroidery/child-link-ocarina-of-time/
 category: bordado
 categories:
   - bordado

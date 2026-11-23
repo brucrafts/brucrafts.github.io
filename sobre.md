@@ -2,6 +2,8 @@
 layout: default
 title: sobre
 permalink: /sobre/
+lang: pt-BR
+alternate_url: /en/about/
 ---
 
 <section class="page-shell">

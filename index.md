@@ -1,6 +1,8 @@
 ---
 layout: default
 title: início
+lang: pt-BR
+alternate_url: /en/
 ---
 
 <section class="hero">
@@ -20,11 +22,11 @@ title: início
     <p>meus últimos posts por aqui</p>
   </div>
 
-  {% assign latest_posts = site.posts | sort: "date" | reverse %}
+  {% assign latest_posts = site.posts | where: "lang", page.lang | sort: "date" | reverse %}
   {% for post in latest_posts limit: 5 %}
     <article class="feed-card">
       {% if post.image %}
-        <a class="feed-photo" href="{{ post.url | relative_url }}" aria-label="Ver {{ post.title }}">
+        <a class="feed-photo" href="{{ post.url | relative_url }}" aria-label="Ver {{ post.title | escape }}">
           <img src="{{ post.image | relative_url }}" alt="{{ post.image_alt | default: post.title | escape }}" loading="lazy" decoding="async">
         </a>
       {% endif %}
@@ -39,7 +41,7 @@ title: início
     </article>
   {% endfor %}
 
-  {% if site.posts.size == 0 %}
+  {% if latest_posts.size == 0 %}
     <div class="empty-feed">
       <p>♡ em breve, novidades do meu craft room!</p>
       <small>Adicione posts na pasta <code>_posts</code> para preencher o feed.</small>

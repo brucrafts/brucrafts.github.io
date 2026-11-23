@@ -2,6 +2,8 @@
 layout: default
 title: bordado
 permalink: /bordado/
+lang: pt-BR
+alternate_url: /en/embroidery/
 ---
 
 <section class="page-shell">
