@@ -1,0 +1,11 @@
+{% assign copy = site.data.translations[page.lang] %}
+<section class="page-shell">
+  <a class="back-link" href="{{ copy.paths.home | relative_url }}">{{ copy.home.back_link }}</a>
+  <p class="post-label">✿ {{ copy.amigurumi.post_label }}</p>
+  <h1>{{ copy.amigurumi.title }} ♡</h1>
+  <p class="lead">{{ copy.amigurumi.lead }}</p>
+  <div class="empty-feed">
+    <p>{{ copy.amigurumi.empty_message }}</p>
+    <small>{{ copy.amigurumi.empty_hint }}</small>
+  </div>
+</section>

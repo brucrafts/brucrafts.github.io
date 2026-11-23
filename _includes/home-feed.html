@@ -1,0 +1,46 @@
+{% assign copy = site.data.translations[page.lang] %}
+<section class="hero">
+  <h1><span class="heart">♡</span> brucrafts <span class="heart">♡</span></h1>
+  <p class="tagline">{{ copy.home.tagline }}</p>
+  <p class="intro-copy">{{ copy.home.intro_before }}<br class="desktop-only">{{ copy.home.intro_after }}</p>
+  <div class="pixel-decor" role="img" aria-label="{{ copy.home.icons_label }}">
+    <span title="{{ copy.home.games_title }}">🎮</span><b>✦</b><span title="{{ copy.home.crochet_title }}">🧶</span><b>✦</b><span title="{{ copy.home.embroidery_title }}">🪡</span><b>✦</b><span title="{{ copy.home.books_title }}">📚</span>
+  </div>
+</section>
+
+<div class="separator"><span>♡</span></div>
+
+<section class="feed-section">
+  <div class="section-title">
+    <h2><span class="sparkle">✧</span> {{ copy.home.feed_title }}</h2>
+    <p>{{ copy.home.feed_subtitle }}</p>
+  </div>
+
+  {% assign latest_posts = site.posts | where: "lang", page.lang | sort: "date" | reverse %}
+  {% for post in latest_posts limit: 5 %}
+    <article class="feed-card">
+      {% if post.image %}
+        <a class="feed-photo" href="{{ post.url | relative_url }}" aria-label="{{ copy.home.view_post }} {{ post.title | escape }}">
+          <img src="{{ post.image | relative_url }}" alt="{{ post.image_alt | default: post.title | escape }}" loading="lazy" decoding="async">
+        </a>
+      {% endif %}
+      <div class="feed-content">
+        <div class="post-label"><span>✿</span> {{ post.label | default: copy.home.default_post_label }}</div>
+        <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+        <p class="post-excerpt">{{ post.excerpt_text | default: post.description }}</p>
+        <div class="post-meta">{{ post.category }}{% if post.date %} <span>·</span> {{ post.date | date: copy.home.date_format }}{% endif %}</div>
+        <a class="text-button" href="{{ post.url | relative_url }}">{{ copy.home.read_post }} <span>→</span></a>
+      </div>
+      <span class="corner-symbol" aria-hidden="true">♡</span>
+    </article>
+  {% endfor %}
+
+  {% if latest_posts.size == 0 %}
+    <div class="empty-feed">
+      <p>{{ copy.home.empty_message }}</p>
+      <small>{{ copy.home.empty_hint_before }} <code>_posts</code> {{ copy.home.empty_hint_after }}</small>
+    </div>
+  {% endif %}
+</section>
+
+<div class="bottom-decor"><span>✿</span><div></div><b>&lt;/♥&gt;</b><div></div><span>✿</span></div>

@@ -1,0 +1,50 @@
+{% assign copy = site.data.translations[page.lang] %}
+<section class="page-shell">
+  <a class="back-link" href="{{ copy.paths.home | relative_url }}">{{ copy.home.back_link }}</a>
+  <p class="post-label">✿ {{ copy.embroidery.post_label }}</p>
+  <h1>{{ copy.embroidery.title }} ♡</h1>
+  <p class="lead">{{ copy.embroidery.lead }}</p>
+
+  <section class="pattern-library" aria-labelledby="pattern-library-title">
+    <h2 id="pattern-library-title">{{ copy.embroidery.library_title }}</h2>
+    <details class="pattern-folder" open>
+      <summary class="pattern-folder-title">
+        <span aria-hidden="true">📁</span>
+        <span>{{ copy.embroidery.folder_title }}</span>
+        <span class="pattern-folder-chevron" aria-hidden="true">⌄</span>
+      </summary>
+      <div class="pattern-folder-content">
+        <details class="pattern-project" open>
+          <summary class="pattern-project-title">
+            <span aria-hidden="true">📁</span>
+            <span>{{ copy.embroidery.project_title }}</span>
+            <span class="pattern-folder-chevron" aria-hidden="true">⌄</span>
+          </summary>
+          <div class="pattern-project-content">
+            <figure class="pattern-preview">
+              <img src="{{ '/assets/patterns/the-legend-of-zelda/Link - Ocarina of time/link-ocarina-of-time-preview.png' | relative_url }}" alt="{{ copy.embroidery.preview_alt | escape }}" width="369" height="735" loading="lazy" decoding="async">
+              <figcaption>{{ copy.embroidery.preview_caption }}</figcaption>
+            </figure>
+            <div class="pattern-downloads">
+              <p>{{ copy.embroidery.download_prompt }}</p>
+              <ul class="pattern-files">
+                <li>
+                  <a href="{{ '/assets/patterns/the-legend-of-zelda/Link - Ocarina of time/link-ocarina-of-time-pt-br.pdf' | relative_url }}" download hreflang="pt-BR">
+                    <span aria-hidden="true">🇧🇷</span>
+                    <span>{{ copy.embroidery.pattern_pt }}</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="{{ '/assets/patterns/the-legend-of-zelda/Link - Ocarina of time/link-ocarina-of-time-en.pdf' | relative_url }}" download hreflang="en">
+                    <span aria-hidden="true">🇺🇸</span>
+                    <span>{{ copy.embroidery.pattern_en }}</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </details>
+      </div>
+    </details>
+  </section>
+</section>

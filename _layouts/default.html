@@ -1,14 +1,9 @@
 {% assign current_lang = page.lang | default: site.lang | default: "pt-BR" %}
-{% assign home_path = "/" %}
-{% assign embroidery_path = "/bordado/" %}
-{% assign amigurumi_path = "/amigurumi/" %}
-{% assign about_path = "/sobre/" %}
-{% if current_lang == "en" %}
-  {% assign home_path = "/en/" %}
-  {% assign embroidery_path = "/en/embroidery/" %}
-  {% assign amigurumi_path = "/en/amigurumi/" %}
-  {% assign about_path = "/en/about/" %}
-{% endif %}
+{% assign copy = site.data.translations[current_lang] %}
+{% assign home_path = copy.paths.home %}
+{% assign embroidery_path = copy.paths.embroidery %}
+{% assign amigurumi_path = copy.paths.amigurumi %}
+{% assign about_path = copy.paths.about %}
 <!doctype html>
 <html lang="{{ current_lang }}">
 <head>
@@ -23,34 +18,34 @@
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-  <a class="skip-link" href="#main-content">{% if current_lang == "en" %}Skip to content{% else %}Pular para o conteúdo{% endif %}</a>
+  <a class="skip-link" href="#main-content">{{ copy.skip_to_content }}</a>
   <div class="browser-frame">
     <div class="browser-top">
       <div class="window-dots" aria-hidden="true"><i></i><i></i><i></i></div>
       <span class="browser-code" aria-hidden="true">&lt;/♥&gt;</span>
-      <nav class="language-switch" aria-label="{% if current_lang == 'en' %}Site language{% else %}Idioma do site{% endif %}">
+      <nav class="language-switch" aria-label="{{ copy.language.nav_label }}">
         {% if current_lang == "en" %}
-          <a href="{{ page.alternate_url | default: '/' | relative_url }}" lang="pt-BR" hreflang="pt-BR" aria-label="Mudar para português">🇧🇷 <span>PT</span></a>
-          <a href="{{ page.url | relative_url }}" lang="en" hreflang="en" aria-label="English (current language)" aria-current="page">🇺🇸 <span>EN</span></a>
+          <a href="{{ page.alternate_url | default: '/' | relative_url }}" lang="pt-BR" hreflang="pt-BR" aria-label="{{ copy.language.switch_to_pt }}">🇧🇷 <span>PT</span></a>
+          <a href="{{ page.url | relative_url }}" lang="en" hreflang="en" aria-label="{{ copy.language.current_en }}" aria-current="page">🇺🇸 <span>EN</span></a>
         {% else %}
-          <a href="{{ page.url | relative_url }}" lang="pt-BR" hreflang="pt-BR" aria-label="Português (idioma atual)" aria-current="page">🇧🇷 <span>PT</span></a>
-          <a href="{{ page.alternate_url | default: '/en/' | relative_url }}" lang="en" hreflang="en" aria-label="Switch to English">🇺🇸 <span>EN</span></a>
+          <a href="{{ page.url | relative_url }}" lang="pt-BR" hreflang="pt-BR" aria-label="{{ copy.language.current_pt }}" aria-current="page">🇧🇷 <span>PT</span></a>
+          <a href="{{ page.alternate_url | default: '/en/' | relative_url }}" lang="en" hreflang="en" aria-label="{{ copy.language.switch_to_en }}">🇺🇸 <span>EN</span></a>
         {% endif %}
       </nav>
     </div>
     <header class="site-header">
       <a class="brand" href="{{ home_path | relative_url }}"> &lt;/♥ brucrafts &gt;</a>
-      <nav class="main-nav" aria-label="{% if current_lang == 'en' %}Main navigation{% else %}Navegação principal{% endif %}">
-        <a href="{{ home_path | relative_url }}"{% if page.url == home_path %} class="nav-home" aria-current="page"{% endif %}>{% if current_lang == "en" %}home{% else %}início{% endif %}</a>
+      <nav class="main-nav" aria-label="{{ copy.nav.aria_label }}">
+        <a href="{{ home_path | relative_url }}"{% if page.url == home_path %} class="nav-home" aria-current="page"{% endif %}>{{ copy.nav.home }}</a>
         <details class="nav-dropdown">
-          <summary class="nav-dropdown-button">{% if current_lang == "en" %}patterns{% else %}receitas{% endif %} <span aria-hidden="true">⌄</span></summary>
+          <summary class="nav-dropdown-button">{{ copy.nav.patterns }} <span aria-hidden="true">⌄</span></summary>
           <div class="dropdown-menu">
-            <a href="{{ embroidery_path | relative_url }}"{% if page.url == embroidery_path %} aria-current="page"{% endif %}>♡ {% if current_lang == "en" %}embroidery{% else %}bordado{% endif %}</a>
-            <a href="{{ amigurumi_path | relative_url }}"{% if page.url == amigurumi_path %} aria-current="page"{% endif %}>♡ amigurumi</a>
+            <a href="{{ embroidery_path | relative_url }}"{% if page.url == embroidery_path %} aria-current="page"{% endif %}>♡ {{ copy.nav.embroidery }}</a>
+            <a href="{{ amigurumi_path | relative_url }}"{% if page.url == amigurumi_path %} aria-current="page"{% endif %}>♡ {{ copy.nav.amigurumi }}</a>
           </div>
         </details>
-        <a href="https://www.instagram.com/itsbrusilvestre/" target="_blank" rel="noopener noreferrer">{% if current_lang == "en" %}projects{% else %}projetos{% endif %} ↗</a>
-        <a href="{{ about_path | relative_url }}"{% if page.url == about_path %} aria-current="page"{% endif %}>{% if current_lang == "en" %}about{% else %}sobre{% endif %}</a>
+        <a href="https://www.instagram.com/itsbrusilvestre/" target="_blank" rel="noopener noreferrer">{{ copy.nav.projects }} ↗</a>
+        <a href="{{ about_path | relative_url }}"{% if page.url == about_path %} aria-current="page"{% endif %}>{{ copy.nav.about }}</a>
       </nav>
     </header>
     <main class="site-main" id="main-content">

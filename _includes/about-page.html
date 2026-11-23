@@ -1,0 +1,11 @@
+{% assign copy = site.data.translations[page.lang] %}
+<section class="page-shell">
+  <a class="back-link" href="{{ copy.paths.home | relative_url }}">{{ copy.home.back_link }}</a>
+  <div class="about-copy">
+    <h1>{{ copy.about.title }}</h1>
+    <p>{{ copy.about.paragraph_1 }}</p>
+    <p>{{ copy.about.paragraph_2 }}</p>
+    <p>{{ copy.about.paragraph_3 }}</p>
+    <p><a href="https://www.instagram.com/itsbrusilvestre/" target="_blank" rel="noopener noreferrer">@itsbrusilvestre ♡</a></p>
+  </div>
+</section>

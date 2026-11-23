@@ -1,0 +1,132 @@
+pt-BR:
+  paths:
+    home: /
+    embroidery: /bordado/
+    amigurumi: /amigurumi/
+    about: /sobre/
+  skip_to_content: "Pular para o conteúdo"
+  language:
+    nav_label: "Idioma do site"
+    switch_to_pt: "Mudar para português"
+    current_pt: "Português (idioma atual)"
+    switch_to_en: "Mudar para inglês"
+    current_en: "Inglês (idioma atual)"
+  nav:
+    aria_label: "Navegação principal"
+    home: "início"
+    patterns: "receitas"
+    embroidery: "bordado"
+    amigurumi: "amigurumi"
+    projects: "projetos"
+    about: "sobre"
+  home:
+    back_link: "← início"
+    tagline: "alguns games e muitos hobbies de jovem senhora"
+    intro_before: "Receitas, gráficos, projetos e pequenas inspirações"
+    intro_after: " para fazer algo seu também. ♡"
+    icons_label: "games, crafts, bordado e livros"
+    games_title: "games"
+    crochet_title: "crochê"
+    embroidery_title: "bordado"
+    books_title: "livros"
+    feed_title: "feed"
+    feed_subtitle: "meus últimos posts por aqui"
+    default_post_label: "new post"
+    view_post: "Ver"
+    read_post: "ver post"
+    empty_message: "♡ em breve, novidades do meu craft room!"
+    empty_hint_before: "Adicione posts na pasta"
+    empty_hint_after: "para preencher o feed."
+    date_format: "%d.%m.%Y"
+  embroidery:
+    post_label: "receitas"
+    title: "bordado"
+    lead: "Gráficos, pontos e projetos para bordar com calma."
+    library_title: "pastas de padrões"
+    folder_title: "The Legend of Zelda"
+    project_title: "Link - Ocarina of time"
+    preview_alt: "Prévia do padrão de bordado do Link em Ocarina of Time"
+    preview_caption: "Prévia do padrão"
+    download_prompt: "Baixe o padrão no idioma desejado:"
+    pattern_pt: "Padrão em português (PDF)"
+    pattern_en: "Pattern in English (PDF)"
+  amigurumi:
+    post_label: "receitas"
+    title: "amigurumi"
+    lead: "Receitinhas de bichinhos e personagens feitos de crochê."
+    empty_message: "♡ receitas de amigurumi chegando!"
+    empty_hint: "Em breve, mais projetos e receitas por aqui."
+  about:
+    title: "oi, eu sou a Bruna! ♡"
+    paragraph_1: "Sou uma (ex?) engenheira de software e amo hobbies de jovem senhora. :)"
+    paragraph_2: "Entre alguns games e muitos projetos manuais, gosto de transformar minhas ideias em coisas feitas com as próprias mãos."
+    paragraph_3: "Criei o brucrafts para compartilhar receitas, gráficos, projetos e pequenas inspirações para fazer algo seu também."
+  post:
+    back_to_feed: "← voltar para o feed"
+    instagram_link: "mais projetos no instagram"
+en:
+  paths:
+    home: /en/
+    embroidery: /en/embroidery/
+    amigurumi: /en/amigurumi/
+    about: /en/about/
+  skip_to_content: "Skip to content"
+  language:
+    nav_label: "Site language"
+    switch_to_pt: "Switch to Portuguese"
+    current_pt: "Portuguese (current language)"
+    switch_to_en: "Switch to English"
+    current_en: "English (current language)"
+  nav:
+    aria_label: "Main navigation"
+    home: "home"
+    patterns: "patterns"
+    embroidery: "embroidery"
+    amigurumi: "amigurumi"
+    projects: "projects"
+    about: "about"
+  home:
+    back_link: "← home"
+    tagline: "some games and lots of old-lady hobbies"
+    intro_before: "Patterns, charts, projects, and little inspiration"
+    intro_after: " to make something of your own. ♡"
+    icons_label: "Games, crafts, embroidery, and books"
+    games_title: "games"
+    crochet_title: "crochet"
+    embroidery_title: "embroidery"
+    books_title: "books"
+    feed_title: "feed"
+    feed_subtitle: "my latest posts"
+    default_post_label: "new post"
+    view_post: "View"
+    read_post: "read post"
+    empty_message: "♡ new crafts coming soon!"
+    empty_hint_before: "Add posts to the"
+    empty_hint_after: "folder to fill the feed."
+    date_format: "%m/%d/%Y"
+  embroidery:
+    post_label: "patterns"
+    title: "embroidery"
+    lead: "Charts, stitches, and projects to enjoy at your own pace."
+    library_title: "pattern folders"
+    folder_title: "The Legend of Zelda"
+    project_title: "Link - Ocarina of Time"
+    preview_alt: "Preview of the Link embroidery pattern from Ocarina of Time"
+    preview_caption: "Pattern preview"
+    download_prompt: "Download the pattern in your preferred language:"
+    pattern_pt: "Pattern in Portuguese (PDF)"
+    pattern_en: "Pattern in English (PDF)"
+  amigurumi:
+    post_label: "patterns"
+    title: "amigurumi"
+    lead: "Patterns for little crochet animals and characters."
+    empty_message: "♡ amigurumi patterns coming soon!"
+    empty_hint: "More projects and patterns are on their way."
+  about:
+    title: "hi, I'm Bruna! ♡"
+    paragraph_1: "I'm a (former?) software engineer who loves the hobbies of a cozy old lady. :)"
+    paragraph_2: "Between video games and lots of handmade projects, I love turning ideas into things made by hand."
+    paragraph_3: "I created brucrafts to share patterns, charts, projects, and little bits of inspiration so you can make something of your own, too."
+  post:
+    back_to_feed: "← back to the feed"
+    instagram_link: "more projects on Instagram"
