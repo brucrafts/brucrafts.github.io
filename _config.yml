@@ -3,6 +3,8 @@ lang: pt-BR
 description: alguns games e muitos hobbies de jovem senhora
 url: ""
 baseurl: ""
+analytics:
+  goatcounter_code: "217834852"
 markdown: kramdown
 permalink: /:categories/:title/
 defaults:
