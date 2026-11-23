@@ -1,0 +1,12 @@
+title: brucrafts
+description: alguns games e muitos hobbies de jovem senhora
+url: ""
+baseurl: ""
+markdown: kramdown
+permalink: /:categories/:title/
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post

@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#8745f4">
+  <title>{% if page.title %}{{ page.title | escape }} · {% endif %}{{ site.title | escape }}</title>
+  <meta name="description" content="{{ page.description | default: site.description | escape }}">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Pular para o conteúdo</a>
+  <div class="browser-frame">
+    <div class="browser-top" aria-hidden="true">
+      <div class="window-dots"><i></i><i></i><i></i></div>
+      <span class="browser-code">&lt;/♥&gt;</span>
+    </div>
+    <header class="site-header">
+      <a class="brand" href="{{ '/' | relative_url }}"><span>&lt;/♥</span> brucrafts</a>
+      <nav class="main-nav" aria-label="Navegação principal">
+        <a href="{{ '/' | relative_url }}"{% if page.url == '/' %} class="nav-home" aria-current="page"{% endif %}>início</a>
+        <details class="nav-dropdown">
+          <summary class="nav-dropdown-button">receitas <span aria-hidden="true">⌄</span></summary>
+          <div class="dropdown-menu">
+            <a href="{{ '/bordado/' | relative_url }}"{% if page.url == '/bordado/' %} aria-current="page"{% endif %}>♡ bordado</a>
+            <a href="{{ '/amigurumi/' | relative_url }}"{% if page.url == '/amigurumi/' %} aria-current="page"{% endif %}>♡ amigurumi</a>
+          </div>
+        </details>
+        <a href="https://www.instagram.com/itsbrusilvestre/" target="_blank" rel="noopener noreferrer">projetos ↗</a>
+        <a href="{{ '/sobre/' | relative_url }}"{% if page.url == '/sobre/' %} aria-current="page"{% endif %}>sobre</a>
+      </nav>
+    </header>
+    <main class="site-main" id="main-content">
+      {{ content }}
+    </main>
+    <footer class="site-footer" aria-hidden="true">
+      <span>✿</span><div></div><b>&lt;/♥&gt;</b><div></div><span>✿</span>
+    </footer>
+  </div>
+</body>
+</html>
