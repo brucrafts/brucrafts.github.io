@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Child Link - Ocarina of Time"
+title: "Link - Ocarina of Time"
 date: 2026-11-23
 lang: en
 alternate_url: /bordado/link-ocarina-of-time/
